@@ -1,0 +1,217 @@
+:root {
+  --blue: #15497e;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(175, 175, 175); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(95, 95, 95); 
+}
+
+body{
+    font-size: 16px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid var(--blue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  box-sizing: border-box;
+
+  color: var(--blue);
+  background-color: white;
+  font-weight: bold;
+}
+
+.navbar>*{
+  max-height: 4rem;
+}
+
+.logo{
+  font-size: 2rem;
+}
+
+.logo img{
+  height: 3.5rem;
+}
+
+.navmenu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navmenu ul li {
+  float: left;
+  cursor: pointer;
+}
+
+.navmenu ul li a {
+  font-size: .9rem;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.navmenu ul li a:hover {
+  background-color: whitesmoke;
+}
+
+
+.main{
+  padding-top: 4rem;
+  box-sizing: border-box;
+}
+
+.form-container{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  width: 300px;
+  background-color: white;
+  border-radius: 2px;
+  overflow-x: hidden;
+  border: 1px solid var(--blue);
+}
+.card>*{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-header{
+  color: var(--blue);
+  background-color: rgb(194, 198, 199);
+  height: 4rem;
+}
+
+.card-header h5{
+  font-weight: bold;
+}
+
+.card-body{
+  box-sizing: border-box;
+  background-color: white;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body .tab{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.tab-item{
+  flex: 1;
+  text-align: center;
+  padding: 7px 0;
+  border-bottom: 1.8px solid #bdbdbd;
+  color: grey;
+  cursor: pointer;
+}
+.tab-item.active, .tab-item:hover{
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+
+.tab-target{
+  padding-top: 19px;
+}
+
+.remember{
+  text-align: center;
+  padding-bottom: 17px;
+}
+
+.input-group-prepend span, input.form-control{
+  border-radius: 0;
+  border: 1px solid #dddddd;
+}
+
+.card-footer{
+  height: 3.5rem;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.card-footer button{
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: var(--blue);
+  font-weight: bold;
+  color: white;
+}
+
+.card-footer button:hover{
+  color: rgb(255, 196, 0);
+}
+
+footer{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 100px;
+  font-size: .9rem;
+  color: white;
+  background-color: var(--blue);
+}
+
+.footer-item{
+  width: calc(100%/3.5);
+}
+
+.footer-item .title{
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer-item .line{
+  display: block;
+  width: 40px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: rgb(153, 197, 255);
+  margin-bottom: 20px;
+}

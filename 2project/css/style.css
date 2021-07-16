@@ -1,0 +1,144 @@
+:root {
+  --blue: #15497e;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(175, 175, 175); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(95, 95, 95); 
+}
+
+body{
+    font-size: 16px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.btn{
+    border-radius: 0;
+}
+
+.header-fix{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 108px;
+}
+
+.nav{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.nav-item{
+    margin: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    color: rgb(201, 199, 199);
+}
+
+.nav-item span{
+    margin-right: 5px;
+    font-size: 1rem;
+}
+.nav-item div{
+    flex: 1;
+}
+
+/* ============================= Toolbar */
+.toolbar{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+
+    padding: 15px 10px;
+
+    background-color: var(--blue);
+    color: white;
+}
+
+.toolbar .item:not(:last-child){
+    margin-right: 15px;
+}
+
+.toolbar .item{
+    padding: 5px 20px;
+}
+
+/* Main Content */
+.main-content{
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 128px 10px 0px;
+    margin-bottom: 50px;
+}
+
+.table-head tr th{
+    background-color: var(--blue);
+    box-sizing: border-box;
+    padding: 15px 5px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.table-body tr td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-head2 tr th{
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+
+    max-width: 80px;
+    min-width: 80px;
+
+    overflow: hidden;
+}
+
+.table-body2 tr td{
+    text-align: right;
+
+    max-width: 80px;
+    min-width: 80px;
+}

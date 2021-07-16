@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GLOBAL STRUCTURED</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#"><img src="assets/logo.jpeg" alt="logo"></a>
+        </div>
+        <div class="navmenu">
+            <ul>
+                <li><a>home</a></li>
+                <li><a>vector ml</a></li>
+                <li><a>whom we serve</a></li>
+                <li><a>technology</a></li>
+                <li><a>leadership</a></li>
+                <li><a>contact us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="form-container">
+            <div class="card">
+                <div class="card-header">
+                    <h5>VectorML Platform</h5>
+                </div>
+                <div class="card-body">
+                    <div class="tab">
+                        <div class="tab-item active" id="tab-form-login">Log In</div>
+                        <div class="tab-item" id="tab-form-signup">Sign Up</div>
+                    </div>
+                    <div class="tab-target">
+                        <form class="form" id="form-login">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1" style="font-size: .8rem; width: 40px;">@</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Email" aria-label="Email"
+                                    aria-describedby="basic-addon1" style="background-color: rgb(236, 255, 255);" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1" style="font-size: 1.1rem; width: 40px;"><i class="fa fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                                    aria-describedby="basic-addon1" style="background-color: rgb(236, 255, 255);" />
+                            </div>
+                            <div class="remember">
+                                <a href="#">
+                                    <small id="emailHelp" class="form-text text-muted">Don't remember your password?</small>
+                                </a>
+                            </div>
+                        </form>
+                        <form class="form d-none" id="form-signup">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1" style="font-size: .8rem; width: 40px;">@</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Email" aria-label="Email"
+                                    aria-describedby="basic-addon1" style="background-color: rgb(236, 255, 255);" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1" style="font-size: 1.1rem; width: 40px;"><i class="fa fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                                    aria-describedby="basic-addon1" style="background-color: rgb(236, 255, 255);" />
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1" style="font-size: 1.1rem; width: 40px;"><i class="fa fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Password Confirmation" aria-label="Password"
+                                    aria-describedby="basic-addon1" style="background-color: rgb(236, 255, 255);" />
+                            </div>
+                            <small id="passwordError" class="form-text text-muted d-none" style="color: red;">Password tidak sama!</small>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btnLogIn" id="btn-form-login" onclick="jumpuToMainPage();">LOG IN <span><i class="fa fa-chevron-right"></i></span></button>
+                    <button class="btn btnSignUp d-none" id="btn-form-signup">SIGN UP <span><i class="fa fa-chevron-right"></i></span></button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-item">
+                <div class="title">about us</div>
+                <span class="line"></span>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas culpa natus corrupti, animi ut quos, incidunt ullam voluptatem est eveniet ex facilis nihil rem, alias eligendi quis laudantium voluptates molestias.</p>
+            </div>
+            <div class="footer-item">
+                <div class="title">london office</div>
+                <span class="line"></span>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas culpa natus corrupti, animi ut quos, incidunt ullam voluptatem est eveniet ex facilis nihil rem, alias eligendi quis laudantium voluptates molestias.</p>
+            </div>
+            <div class="footer-item">
+                <div class="title">toronto office</div>
+                <span class="line"></span>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas culpa natus corrupti, animi ut quos, incidunt ullam voluptatem est eveniet ex facilis nihil rem, alias eligendi quis laudantium voluptates molestias.</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+    <script>
+        const jumpuToMainPage = () =>{
+            document.location.href = "2project/index.html"
+        }
+        $(document).ready(()=>{
+            $("#tab-form-login").on('click',()=>{
+                $('#tab-form-login').removeClass('active').addClass('active');
+                $('#form-login').removeClass('d-none');
+                $('#btn-form-login').removeClass('d-none');
+                
+                $('#tab-form-signup').removeClass('active');
+                $('#form-signup').removeClass('d-none').addClass('d-none');
+                $('#btn-form-signup').removeClass('d-none').addClass('d-none');
+            })
+            $("#tab-form-signup").on('click',()=>{
+                $('#tab-form-signup').removeClass('active').addClass('active');
+                $('#form-signup').removeClass('d-none');
+                $('#btn-form-signup').removeClass('d-none');
+                
+                $('#tab-form-login').removeClass('active');
+                $('#form-login').removeClass('d-none').addClass('d-none');
+                $('#btn-form-login').removeClass('d-none').addClass('d-none');
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+:root {
+  --blue: #15497e;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(175, 175, 175); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(95, 95, 95); 
+}
+
+body{
+    font-size: 16px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.btn{
+    border-radius: 0;
+}
+
+.header-fix{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 108px;
+}
+
+.nav{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.nav-item{
+    margin: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    color: rgb(201, 199, 199);
+}
+
+.nav-item span{
+    margin-right: 5px;
+    font-size: 1rem;
+}
+.nav-item div{
+    flex: 1;
+}
+
+/* ============================= Toolbar */
+.toolbar{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+
+    padding: 15px 10px;
+
+    background-color: var(--blue);
+    color: white;
+}
+
+.toolbar .item:not(:last-child){
+    margin-right: 15px;
+}
+
+.toolbar .item{
+    padding: 5px 20px;
+}
+
+.toolbar .select{
+    width: 200px;
+    margin-right: 15px;
+}
+
+#toolbarselect{
+    border-radius: 0;
+}
+
+.toggleSideBar{
+    background-color: transparent;
+    height: 35px;
+    widows: 35px;
+    line-height: 35px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+
+/* Side Filter */
+.content{
+    box-sizing: border-box;
+}
+
+.sidefilter{
+    background-color: white;
+    min-width: 220px;
+    max-width: 220px;
+    color: var(--blue);
+    padding-top: 128px;
+    padding-bottom: 50px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 998;
+    transition: .5s all ease-in-out;
+}
+
+.hide{
+    transform: translateX(-220px);
+}
+
+.collapseToggle{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-bottom: 2px solid var(--blue);
+    border-top: 2px solid var(--blue);
+}
+.Sub{
+    padding: 0;
+    padding-right: 10px;
+    border: none;
+    font-size: 1rem;
+}
+.btnCollapse, .btnCollapse:hover, .collapseToggle div{
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.filter-items{
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    box-sizing: border-box;
+    font-size: .8rem;
+    font-weight: normal;
+}
+
+.filter-item{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.filter-item label{
+    font-weight: bold;
+}
+.filter-item select{
+    border-radius: 0;
+}
+
+
+
+/* Main Content */
+.main-content{
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 250px;
+    padding-top: 128px;
+    margin-bottom: 50px;
+    padding-bottom: 0;
+    transition: .5s all ease-in-out;
+}
+
+.expand{
+    padding-left: 10px;
+}
+
+.graph-indicator{
+    width: 200px;
+}
+
+.collapseGraph-item{
+    padding: 4px 7px;
+    line-height: .7rem;
+}
+.collapseGraph-item span{
+    margin-right: 5px;
+}
+
+/* .main-graph{
+    background-color: var(--blue);
+} */
+/* .tableResponsive{
+    max-width: 100%;
+    overflow-x: auto;
+} */
+
+.table-head tr th{
+    background-color: var(--blue);
+    box-sizing: border-box;
+    padding: 15px 5px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.table-body tr td{
+    text-align: center;
+}
+
+.table-head2 tr th{
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+
+    max-width: 80px;
+    min-width: 80px;
+
+    overflow: hidden;
+}
+
+.table-body2 tr td{
+    text-align: right;
+
+    max-width: 80px;
+    min-width: 80px;
+}
+
+.dataTables_filter, .dataTables_paginate{
+    float: right;
+}

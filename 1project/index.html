@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="header-fix">
+        <!-- NavBar -->
+        <nav class="nav">
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-sticky-note"></i></span>
+                <div>Portofolio Summary</div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-folder-open"></i></span>
+                <div>Segmant Portofolio</div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-random"></i></span>
+                <div>Forecast</div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-globe"></i></span>
+                <div>Portofolio Visualization</div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-file-text"></i></span>
+                <div>Reports</div>
+            </a>
+        </nav>
+        
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <button class="btn btn-sm btn-dark toggleSideBar mr-4" onclick="toogleSideBar();"><span class="icon"><i class="fa fa-bars"></i></span></button>
+            <button class="btn btn-secondary btn-sm item">Run</button>
+            <a href="#" class="item">Portofolio</a>
+            <div class="select">
+                <select class="form-control form-control-sm" id="toolbarselect">
+                    <option>Query</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="select">
+                <select class="form-control form-control-sm" id="toolbarselect">
+                    <option>Output</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <a href="#" class="item">Graph</a>
+            <a href="#" class="item">Details</a>
+            <a href="#" class="item">Query</a>
+        </div>
+    </div>
+
+    <div class="d-flex flex-row content">
+        <div class="sidefilter" id="sideFilter">
+            <a data-toggle="collapse" href="#collapseFilter1" role="button" aria-expanded="false"
+                aria-controls="collapseFilter1">
+                <div class="collapseToggle">
+                    <div>Assets Assumptions</div>
+                    <span  class="btnCollapse">+</span>
+                </div>
+            </a>
+            <div class="collapse" id="collapseFilter1">
+                <div class="filter-items">
+                    <div class="filter-item">
+                        <label>Interest Rate Curve</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Cumulative Default</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Default Stress</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Default Timing Curve</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Recovery Rate</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Recovery Lag</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Prepayment Curve</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Default Timing Stress</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Periodic Cap</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Life Time Cap</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Life Time Floor</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Rate Reset Frequency</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <a data-toggle="collapse" href="#collapseFilter2" role="button" aria-expanded="false" aria-controls="collapseFilter2">
+                <div class="collapseToggle">
+                    <div>Liability Assumptions</div>
+                    <span class="btnCollapse">+</span>
+                </div>
+            </a>
+            <div class="collapse show" id="collapseFilter2">
+                <div class="filter-items">
+                    <div class="collapseToggle Sub mt-3 mb-3 mt-2">
+                        <div>Senior Debt</div>
+                        <span class="btnCollapse">+</span>
+                    </div>
+                    <div class="filter-item">
+                        <label>Advance Rate</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Liability Interest Rate Curve</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Loan Margin</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Fees</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Reserve Active</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Prin Allocation Type</label>
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="collapseToggle Sub mt-3">
+                        <div>Sub Debt</div>
+                        <span class="btnCollapse">+</span>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <a data-toggle="collapse" href="#collapseFilter3" role="button" aria-expanded="false" aria-controls="collapseFilter3">
+                <div class="collapseToggle">
+                    <div>Structural Inputs</div>
+                    <span class="btnCollapse">+</span>
+                </div>
+            </a>
+            <div class="collapse" id="collapseFilter3">
+                <div class="filter-items">
+                    <div class="filter-item">
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <select class="form-control form-control-sm" id="filter-item-select">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid main-content" id="mainContent">
+            <!-- Table Check -->
+            <table class="table table-sm table-bordered table-responsive" id="dataTable1">
+                <thead class="table-head">
+                    <tr>
+                        <th scope="col">check</th>
+                        <th scope="col">periode</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Day Factor</th>
+                        <th scope="col">Beginning Balance</th>
+                        <th scope="col">Interest Rate</th>
+                        <th scope="col">Payment</th>
+                        <th scope="col">Interest</th>
+                        <th scope="col">Principal</th>
+                        <th scope="col">Ending Balance</th>
+                        <th scope="col">Beginning Balance</th>
+                        <th scope="col">Default Rate</th>
+                        <th scope="col">New Defaults</th>
+                        <th scope="col">Amort Factor</th>
+                        <th scope="col">Prepay Rate</th>
+                        <th scope="col">Voluntary Prepay</th>
+                        <th scope="col">Actual Amort</th>
+                        <th scope="col">Interest Rate</th>
+                        <th scope="col">Actual Interest</th>
+                        <th scope="col">Principal Recovery</th>
+                        <th scope="col">Ending Balance</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <tr>
+                        <td><input type="checkbox" data-id="check-1" onchange="handleCheck(this);"></td>
+                        <td>0</td>
+                        <td>2/1/2007</td>
+                        <td>0.083</td>
+                        <td>100,000,000</td>
+                        <td>9.00%</td>
+                        <td>704,623</td>
+                        <td>750,000</td>
+                        <td>54,623</td>
+                        <td>99,945,377</td>
+                        <td>100,000,000</td>
+                        <td>0.003%</td>
+                        <td>2,778</td>
+                        <td>0.99945</td>
+                        <td>0.0175</td>
+                        <td>16.673</td>
+                        <td>54.621</td>
+                        <td>9.00%</td>
+                        <td>749,979</td>
+                        <td>-</td>
+                        <td>99,925,920</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" data-id="check-2" onchange="handleCheck(this);"></td>
+                        <td>0</td>
+                        <td>2/1/2007</td>
+                        <td>0.083</td>
+                        <td>100,000,000</td>
+                        <td>9.00%</td>
+                        <td>704,623</td>
+                        <td>750,000</td>
+                        <td>54,623</td>
+                        <td>99,945,377</td>
+                        <td>100,000,000</td>
+                        <td>0.003%</td>
+                        <td>2,778</td>
+                        <td>0.99945</td>
+                        <td>0.0175</td>
+                        <td>16.673</td>
+                        <td>54.621</td>
+                        <td>9.00%</td>
+                        <td>749,979</td>
+                        <td>-</td>
+                        <td>99,925,920</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" data-id="check-3" onchange="handleCheck(this);"></td>
+                        <td>0</td>
+                        <td>2/1/2007</td>
+                        <td>0.083</td>
+                        <td>100,000,000</td>
+                        <td>9.00%</td>
+                        <td>704,623</td>
+                        <td>750,000</td>
+                        <td>54,623</td>
+                        <td>99,945,377</td>
+                        <td>100,000,000</td>
+                        <td>0.003%</td>
+                        <td>2,778</td>
+                        <td>0.99945</td>
+                        <td>0.0175</td>
+                        <td>16.673</td>
+                        <td>54.621</td>
+                        <td>9.00%</td>
+                        <td>749,979</td>
+                        <td>-</td>
+                        <td>99,925,920</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" data-id="check-4" onchange="handleCheck(this);"></td>
+                        <td>0</td>
+                        <td>2/1/2007</td>
+                        <td>0.083</td>
+                        <td>100,000,000</td>
+                        <td>9.00%</td>
+                        <td>704,623</td>
+                        <td>750,000</td>
+                        <td>54,623</td>
+                        <td>99,945,377</td>
+                        <td>100,000,000</td>
+                        <td>0.003%</td>
+                        <td>2,778</td>
+                        <td>0.99945</td>
+                        <td>0.0175</td>
+                        <td>16.673</td>
+                        <td>54.621</td>
+                        <td>9.00%</td>
+                        <td>749,979</td>
+                        <td>-</td>
+                        <td>99,925,920</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" data-id="check-5" onchange="handleCheck(this);"></td>
+                        <td>0</td>
+                        <td>2/1/2007</td>
+                        <td>0.083</td>
+                        <td>100,000,000</td>
+                        <td>9.00%</td>
+                        <td>704,623</td>
+                        <td>750,000</td>
+                        <td>54,623</td>
+                        <td>99,945,377</td>
+                        <td>100,000,000</td>
+                        <td>0.003%</td>
+                        <td>2,778</td>
+                        <td>0.99945</td>
+                        <td>0.0175</td>
+                        <td>16.673</td>
+                        <td>54.621</td>
+                        <td>9.00%</td>
+                        <td>749,979</td>
+                        <td>-</td>
+                        <td>99,925,920</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="button-confirmation d-none" id="btnConfirmation">
+                <button class="btn btn-primary">Kontirmasi</button>
+            </div>
+            <!-- End Table Check -->
+            <!-- <div class="d-flex flex-column mb-4">
+                <div class="graph-indicator">
+                    <a data-toggle="collapse" href="#collapseGraph" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="collapseToggle">
+                            <div>Graph</div>
+                            <span class="btnCollapse">+</span>
+                        </div>
+                    </a>
+                    <div class="collapse" id="collapseGraph">
+                        <div class="d-flex justify-content-start collapseGraph-item">
+                            <span>O</span>
+                            <label>Line</label>
+                        </div>
+                        <div class="d-flex justify-content-start collapseGraph-item">
+                            <span>O</span>
+                            <label>Line</label>
+                        </div>
+                        <div class="d-flex justify-content-start collapseGraph-item">
+                            <span>O</span>
+                            <label>Line</label>
+                        </div>
+                        <div class="d-flex justify-content-start collapseGraph-item">
+                            <span>O</span>
+                            <label>Line</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center flex-wrap">
+                    <div class="main-graph m-2">
+                        <canvas id="chartCumulativeDefault" width="400" height="300"></canvas>
+                    </div>
+                    <div class="main-graph m-2">
+                        <canvas id="chartCumulativeDefault2" width="400" height="300"></canvas>
+                    </div>
+                    <div class="main-graph m-2">
+                        <canvas id="chartCumulativeDefault3" width="400" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="graph-indicator">
+                    <a data-toggle="collapse" href="#collapseGraph2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="collapseToggle">
+                            <div>Table</div>
+                            <span class="btnCollapse">+</span>
+                        </div>
+                    </a>
+                    <div class="collapse" id="collapseGraph2">
+                        <div class="d-flex justify-content-start collapseGraph-item">
+                            <span>O</span>
+                            <label>Line</label>
+                        </div>
+                        <div class="d-flex justify-content-start collapseGraph-item">
+                            <span>O</span>
+                            <label>Line</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-sm table-bordered table-responsive" id="dataTable2">
+                <thead class="table-head">
+                    <tr>
+                        <th scope="col">periode</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Day Factor</th>
+                        <th scope="col">Beginning Balance</th>
+                        <th scope="col">Interest Rate</th>
+                        <th scope="col">Payment</th>
+                        <th scope="col">Interest</th>
+                        <th scope="col">Principal</th>
+                        <th scope="col">Ending Balance</th>
+                        <th scope="col">Beginning Balance</th>
+                        <th scope="col">Default Rate</th>
+                        <th scope="col">New Defaults</th>
+                        <th scope="col">Amort Factor</th>
+                        <th scope="col">Prepay Rate</th>
+                        <th scope="col">Voluntary Prepay</th>
+                        <th scope="col">Actual Amort</th>
+                        <th scope="col">Interest Rate</th>
+                        <th scope="col">Actual Interest</th>
+                        <th scope="col">Principal Recovery</th>
+                        <th scope="col">Ending Balance</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1,000,000</td>
+                        <td></td>
+                        <td></td>
+                        <td>66,583,672</td>
+                        <td>32,416,328</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>2/1/2007</td>
+                        <td>0.083</td>
+                        <td>100,000,000</td>
+                        <td>9.00%</td>
+                        <td>704,623</td>
+                        <td>750,000</td>
+                        <td>54,623</td>
+                        <td>99,945,377</td>
+                        <td>100,000,000</td>
+                        <td>0.003%</td>
+                        <td>2,778</td>
+                        <td>0.99945</td>
+                        <td>0.0175</td>
+                        <td>16.673</td>
+                        <td>54.621</td>
+                        <td>9.00%</td>
+                        <td>749,979</td>
+                        <td>-</td>
+                        <td>99,925,920</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>2/1/2007</td>
+                        <td>0.083</td>
+                        <td>100,000,000</td>
+                        <td>9.00%</td>
+                        <td>704,623</td>
+                        <td>750,000</td>
+                        <td>54,623</td>
+                        <td>99,945,377</td>
+                        <td>100,000,000</td>
+                        <td>0.003%</td>
+                        <td>2,778</td>
+                        <td>0.99945</td>
+                        <td>0.0175</td>
+                        <td>16.673</td>
+                        <td>54.621</td>
+                        <td>9.00%</td>
+                        <td>749,979</td>
+                        <td>-</td>
+                        <td>99,925,920</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>2/1/2007</td>
+                        <td>0.083</td>
+                        <td>100,000,000</td>
+                        <td>9.00%</td>
+                        <td>704,623</td>
+                        <td>750,000</td>
+                        <td>54,623</td>
+                        <td>99,945,377</td>
+                        <td>100,000,000</td>
+                        <td>0.003%</td>
+                        <td>2,778</td>
+                        <td>0.99945</td>
+                        <td>0.0175</td>
+                        <td>16.673</td>
+                        <td>54.621</td>
+                        <td>9.00%</td>
+                        <td>749,979</td>
+                        <td>-</td>
+                        <td>99,925,920</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>2/1/2007</td>
+                        <td>0.083</td>
+                        <td>100,000,000</td>
+                        <td>9.00%</td>
+                        <td>704,623</td>
+                        <td>750,000</td>
+                        <td>54,623</td>
+                        <td>99,945,377</td>
+                        <td>100,000,000</td>
+                        <td>0.003%</td>
+                        <td>2,778</td>
+                        <td>0.99945</td>
+                        <td>0.0175</td>
+                        <td>16.673</td>
+                        <td>54.621</td>
+                        <td>9.00%</td>
+                        <td>749,979</td>
+                        <td>-</td>
+                        <td>99,925,920</td>
+                    </tr>
+                </tbody>
+            </table> -->
+            <!-- Chart JS Multi Axis -->
+            <div class="d-flex justify-content-center">
+                <div style="width: 600px;">
+                    <canvas id="multiAxis" width="400" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Chart JS -->
+    <script>
+        var title = {
+                text: "Cumulative Defaults",
+                display: true,
+                fontStyle: 'bold',
+                fontSize: 16,
+                fontColor: 'rgba(21, 73, 126, 1)',
+            };
+        var legend = {
+                display: false
+            };
+        var tooltips = {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return tooltipItem.yLabel;
+                    }
+                }
+            };
+        
+        function getLabel(minn, maxx, stepp){
+            var arr = [];
+            for (i = minn; i <= maxx; i++) {
+                if(i % stepp == 0){
+                    arr.push(i.toString());
+                }
+            }
+            return arr;
+        };
+
+        var ctx = document.getElementById('chartCumulativeDefault');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: getLabel(0, 340, 20),
+                datasets: [{
+                    label: "",
+                    data: [1.2, 1.0, 0.3, 0.5, 0.2, 0.3, 1.2, 1.0, 0.3, 0.5, 0.2, 0.3, 1.2, 1.0, 0.3, 0.5, 0.2, 0.3, 1.2, 1.0, 0.3, 0.5, 0.2, 0.3, 1.2, 1.0, 0.3, 0.5, 0.2, 0.3,],
+                    backgroundColor: 'rgba(21, 73, 126, 0.2)',
+                    borderColor: 'rgba(21, 73, 126, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                title: title,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            // beginAtZero: true,
+                            max: 1.2,
+                            min: 0,
+                            stepSize: 0.2,
+                            callback: function (value, index, values) {
+                                return value.toFixed(2)+"%";
+                            }
+                        }
+                    }],
+                },
+                legend: legend,
+                tooltips: tooltips
+            }
+        });
+
+        function numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+        var ctx2 = document.getElementById('chartCumulativeDefault2');
+            var title2 = title;
+            title2.text = "Loan Amortization";
+            var myChart = new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: getLabel(0, 345, 23),
+                    datasets: [{
+                        label: "",
+                        data: [12000000, 10000000, 30000000, 90000000, 70000000, 55000000, 12000000, 10000000, 30000000, 90000000, 70000000, 55000000, 12000000, 10000000, 30000000, 90000000, 70000000, 55000000, 12000000, 10000000, 30000000, 90000000, 70000000, 55000000, 12000000, 10000000, 30000000, 90000000, 70000000, 55000000,],
+                        backgroundColor: 'rgba(21, 73, 126, 0.2)',
+                        borderColor: 'rgba(21, 73, 126, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    title: title2,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                // beginAtZero: true,
+                                max: 100000000,
+                                min: 0,
+                                stepSize: 10000000,
+                                callback: function (value, index, values) {
+                                    return numberWithCommas(value)
+                                }
+                            }
+                        }],
+                    },
+                    legend: legend,
+                    tooltips: tooltips
+                }
+            });
+
+        var ctx3 = document.getElementById('chartCumulativeDefault3');
+        var title3 = title;
+        title3.text = "1 Month Libor";
+        var myChart2 = new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: getLabel(1, 343, 19),
+                datasets: [{
+                    label: "",
+                    data: [1.2, 1.0, 0.3, 0.5, 0.2, 0.3, 1.2, 1.0, 0.3, 0.5, 0.2, 0.3, 1.2, 1.0, 0.3, 0.5, 0.2, 0.3, 1.2, 1.0, 0.3, 0.5, 0.2, 0.3, 1.2, 1.0, 0.3, 0.5, 0.2, 0.3,],
+                    backgroundColor: 'rgba(21, 73, 126, 0.2)',
+                    borderColor: 'rgba(21, 73, 126, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                title: title3,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            // beginAtZero: true,
+                            max: 8,
+                            min: 0,
+                            stepSize: 1,
+                            callback: function (value, index, values) {
+                                return value.toFixed(2)+"%";
+                            }
+                        }
+                    }],
+                },
+                legend: legend,
+                tooltips: tooltips
+            }
+        });
+
+        function toogleSideBar(){
+            $("#sideFilter").toggleClass("hide");
+            $("#mainContent").toggleClass("expand");
+        }
+    </script>
+    <!-- Data Table -->
+    <script>
+        $(document).ready(function () {
+            // sementara sajoo
+            var t = $('#dataTable1').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "targets": 0
+                }],
+                "order": [[1, 'asc']]
+            });
+
+            t.on('order.dt search.dt', function () {
+                t.column(1, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+            var t = $('#dataTable2').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "targets": 0
+                }],
+                "order": [[1, 'asc']]
+            });
+
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+        });
+    </script>
+    <!-- Handle Check -->
+    <script>
+        let arrayChecked = []
+
+        function handleCheck(element) {
+            const value = {
+                id: element.dataset.id
+                // kalau mau tambah data disini...
+            }
+            if (element.checked) {
+                arrayChecked.push(value)
+            } else {
+                arrayChecked = arrayChecked.filter(val => val.id !== value.id)
+            }
+
+            toggleBtnConfirmation(arrayChecked);
+        }
+
+        function toggleBtnConfirmation(arrayChecked){
+            if (arrayChecked.length > 0) {
+                $('#btnConfirmation').removeClass('d-none')
+            } else {
+                $('#btnConfirmation').addClass('d-none')
+            }
+        }
+
+    </script>
+
+    <!-- Chart JS Multi Axis -->
+    <script src="js/utils.js"></script>
+    <script>
+        var lineChartData = {
+            labels: getLabel(2020, 2044, 4),
+            datasets: [{
+                label: 'Actual Amount',
+                lineTension: 0,
+                borderColor: window.chartColors.blue,
+                backgroundColor: window.chartColors.blue,
+                fill: false,
+                data: [
+                    // ini untuk data random, bisa diganti
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ],
+                yAxisID: 'y-axis-1',
+            }, {
+                label: 'Actual Interest',
+                lineTension: 0,
+                borderColor: window.chartColors.orange,
+                backgroundColor: window.chartColors.orange,
+                fill: false,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ],
+                yAxisID: 'y-axis-2'
+            }, {
+                label: 'Principal Recovery',
+                lineTension: 0,
+                borderColor: window.chartColors.green,
+                backgroundColor: window.chartColors.green,
+                fill: false,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ],
+                yAxisID: 'y-axis-3'
+            }]
+        };
+
+        var ctx = document.getElementById('multiAxis');
+        var myChartMultiAxis = new Chart(ctx, {
+            type: 'line',
+            data: lineChartData,
+            options: {
+                // responsive: true,
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: false,
+                    text: 'Chart.js Multi Axis'
+                },
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-axis-1',
+                        ticks:{
+                            beginAtZero: true,
+                            max: 9000
+                        }
+                    }, {
+                        type: 'linear',
+                        display: false,
+                        position: 'left',
+                        id: 'y-axis-2',
+                        ticks: {
+                            beginAtZero: true
+                        },
+
+                        // // grid line settings
+                        // gridLines: {
+                        //     drawOnChartArea: false, // only want the grid lines for one axis to show up
+                        // },
+                    }, {
+                        type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                        display: false,
+                        position: 'left',
+                        id: 'y-axis-3',
+                        ticks: {
+                            beginAtZero: true
+                        },
+                    }],
+                }
+            }
+        });
+
+        // document.getElementById('randomizeData').addEventListener('click', function () {
+        //     lineChartData.datasets.forEach(function (dataset) {
+        //         dataset.data = dataset.data.map(function () {
+        //             return randomScalingFactor();
+        //         });
+        //     });
+
+        //     window.myLine.update();
+        // });
+
+    </script>
+</body>
+
+</html>

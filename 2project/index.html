@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="header-fix">
+        <!-- NavBar -->
+        <nav class="nav">
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-sticky-note"></i></span>
+                <div>Portofolio Summary</div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-folder-open"></i></span>
+                <div>Segmant Portofolio</div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-random"></i></span>
+                <div>Forecast</div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-globe"></i></span>
+                <div>Portofolio Visualization</div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="icon"><i class="fa fa-file-text"></i></span>
+                <div>Reports</div>
+            </a>
+        </nav>
+        
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-light btn-sm item" data-toggle="modal" data-target="#modalFormCSV">
+                Upload CSV
+            </button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-light btn-sm item" data-toggle="modal" data-target="#modalFormPDF">
+                Upload PDF
+            </button>
+        </div>
+    </div>
+
+    <div class="d-flex flex-row content">
+        <div class="container-fluid main-content">
+            <div id="containerTable1">
+                <button class="btn btn-primary mb-2" data-toggle="collapse" href="#collapseTable1" role="button" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    Show Table 1
+                </button>
+                <div class="collapse mt-2" id="collapseTable1">
+                    <table class="table table-sm table-bordered table-responsive" id="dataTable1">
+                        <thead class="table-head">
+                            <tr>
+                                <th scope="col">periode</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Day Factor</th>
+                                <th scope="col">Beginning Balance</th>
+                                <th scope="col">Interest Rate</th>
+                                <th scope="col">Payment</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Principal</th>
+                                <th scope="col">Ending Balance</th>
+                                <th scope="col">Beginning Balance</th>
+                                <th scope="col">Default Rate</th>
+                                <th scope="col">New Defaults</th>
+                                <th scope="col">Amort Factor</th>
+                                <th scope="col">Prepay Rate</th>
+                                <th scope="col">Voluntary Prepay</th>
+                                <th scope="col">Actual Amort</th>
+                                <th scope="col">Interest Rate</th>
+                                <th scope="col">Actual Interest</th>
+                                <th scope="col">Principal Recovery</th>
+                                <th scope="col">Ending Balance</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="containerTable2">
+                <button class="btn btn-primary mb-2" data-toggle="collapse" href="#collapseTable2" role="button" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    Show Table 2
+                </button>
+                <div class="collapse" id="collapseTable2">
+                    <table class="table table-sm table-bordered table-responsive" id="dataTable2">
+                        <thead class="table-head">
+                            <tr>
+                                <th scope="col">periode</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Day Factor</th>
+                                <th scope="col">Beginning Balance</th>
+                                <th scope="col">Interest Rate</th>
+                                <th scope="col">Payment</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Principal</th>
+                                <th scope="col">Ending Balance</th>
+                                <th scope="col">Beginning Balance</th>
+                                <th scope="col">Default Rate</th>
+                                <th scope="col">New Defaults</th>
+                                <th scope="col">Amort Factor</th>
+                                <th scope="col">Prepay Rate</th>
+                                <th scope="col">Voluntary Prepay</th>
+                                <th scope="col">Actual Amort</th>
+                                <th scope="col">Interest Rate</th>
+                                <th scope="col">Actual Interest</th>
+                                <th scope="col">Principal Recovery</th>
+                                <th scope="col">Ending Balance</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>2/1/2007</td>
+                                <td>0.083</td>
+                                <td>100,000,000</td>
+                                <td>9.00%</td>
+                                <td>704,623</td>
+                                <td>750,000</td>
+                                <td>54,623</td>
+                                <td>99,945,377</td>
+                                <td>100,000,000</td>
+                                <td>0.003%</td>
+                                <td>2,778</td>
+                                <td>0.99945</td>
+                                <td>0.0175</td>
+                                <td>16.673</td>
+                                <td>54.621</td>
+                                <td>9.00%</td>
+                                <td>749,979</td>
+                                <td>-</td>
+                                <td>99,925,920</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-info btn-sm">Show</button>
+                                        <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal CSV -->
+    <div class="modal fade" id="modalFormCSV" tabindex="-1" role="dialog" aria-labelledby="modalFormCSVLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFormCSVLabel">Upload CSV</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="fromControllFile1">Browse CSV</label>
+                            <input type="file" class="form-control-file" id="fromControllFile1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal PDF -->
+    <div class="modal fade" id="modalFormPDF" tabindex="-1" role="dialog" aria-labelledby="modalFormPDFLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFormPDFLabel">Upload PDF</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="fromControllFile1">Browse PDF</label>
+                            <input type="file" class="form-control-file" id="fromControllFile1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var t = $('#dataTable1').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "targets": 0
+                }],
+                "order": [[1, 'asc']]
+            });
+
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+            var t = $('#dataTable2').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "targets": 0
+                }],
+                "order": [[1, 'asc']]
+            });
+
+            t.on('order.dt search.dt', function () {
+                t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+        });
+    </script>
+</body>
+
+</html>
