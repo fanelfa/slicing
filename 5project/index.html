@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>MRStudio</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="left">
+                <h2>MRstudio</h2>
+            </div>
+            <div class="right">
+                <div class="nav">
+                    <a class="active">Catalogue</a>
+                    <a>Your Cart</a>
+                    <a>Favorites</a>
+                    <a>Your Orders</a>
+                </div>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </header>
+        <div class="content">
+            <div class="background">
+                <div></div>
+                <div class="image-wrapper">
+                    <img src="images/sport_basket.jpg" alt="images_basket">
+                </div>
+            </div>
+            <div class="front">
+                <div class="title">Mr. Local Helmet</div>
+                <div class="subtitle">Yellow Cycling Helmet</div>
+                <div class="search">
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Search in MR">
+                    </div>
+                    <div class="button">
+                        <button class="submit">O</button>
+                    </div>
+                </div>
+                <div class="products">
+                    <div id="item1" class="item" onclick="onClick(this);">
+                        <div class="image"></div>
+                        <div class="title">Unbranded Helmet</div>
+                        <div class="subtitle">Urban cycling helmet</div>
+                    </div>
+                    <div id="item2" class="item" onclick="onClick(this);">
+                        <div class="image"></div>
+                        <div class="title">Xiaomi Ninebot</div>
+                        <div class="subtitle">Black scooter helmet</div>
+                    </div>
+                    <div id="item3" class="item active" onclick="onClick(this);">
+                        <div class="image"></div>
+                        <div class="title">Mr. Local Helmet</div>
+                        <div class="subtitle">Orange scooter helmet</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="source">
+            <span>Design source : </span><a href="https://dribbble.com/shots/15663532-Landing-Page" target="_blank">https://dribbble.com/shots/15663532-Landing-Page</a>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
